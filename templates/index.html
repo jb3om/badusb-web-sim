@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BadUSB CTF Challenge</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #121212;
+            color: #f1f1f1;
+            padding: 20px;
+        }
+        h2 {
+            color: #00ffcc;
+        }
+        pre {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        input[type="file"] {
+            background-color: #1e1e1e;
+            color: #00ffcc;
+            border: 1px solid #00ffcc;
+            padding: 5px;
+        }
+        button {
+            background-color: #00ffcc;
+            color: #000;
+            padding: 7px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00e6b8;
+        }
+    </style>
+</head>
+<body>
+    <h2>💻 BadUSB CTF Challenge</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".ino" required>
+        <button type="submit">🚀 Upload & Execute</button>
+    </form>
+
+    {% if result %}
+        <h3>📢 Result: {{ result }}</h3>
+    {% endif %}
+
+    {% if file_content %}
+        <h4>📄 Current light.txt Content:</h4>
+        <pre>{{ file_content }}</pre>
+    {% endif %}
+
+    {% if log_output %}
+        <h4>🧪 Execution Log:</h4>
+        <pre>{{ log_output }}</pre>
+    {% endif %}
+</body>
+</html>
