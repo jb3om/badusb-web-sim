@@ -26,3 +26,10 @@ GUI r
 DELAY 300
 STRING calc.exe
 ENTER
+```
+## 🏁 How to Win (Flag Condition)
+
+To successfully complete the challenge, your uploaded `.ino` file must:
+```ino
+This must result in `C:\target\light.txt` being overwritten with:
+MISSION SUCCESSFUL
